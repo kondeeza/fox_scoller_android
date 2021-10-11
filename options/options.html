@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="options.css"/>
+    <title>Foxscroller options</title>
+</head>
+<body>
+<h1 id="id_title_h1">Einstellungen</h1>
+
+<div class="options_entry"><span id="id_text_set_speed">Speed (px/s) (NL)</span><span>: </span><input id="id_input_PXperS"></div>
+
+<div class="options_entry"><span id="id_action_on_end_text_span">Action on page end: (NL) </span>
+    <select id="id_action_on_end">
+        <option id="id_action_on_end_select_nothing" value="on_end_nothing">Nothing (NL)</option>
+        <option id="id_action_on_end_select_stop" value="on_end_stop">Stop (NL)</option>
+        <option id="id_action_on_end_select_toggle" value="on_end_toggle">Toggle direction (NL)</option>
+    </select>
+</div>
+
+<div class="options_entry"><span id="id_delay_text_span">Delay at end in seconds (NL)</span><span>: </span><input id="id_delay_input"></div>
+
+<div class="options_entry"><input type="checkbox" id="id_keep_scrolling_checkbox"><span id="id_keep_scrolling_text_span">Keep tab scrolling on new page or reload. (NL)</span></div>
+<div class="options_entry"><input type="checkbox" id="id_automatically_start_checkbox"><span id="id_automatically_start_text_span">Automatically start scrolling. (NL)</span></div>
+<div class="options_entry"><input type="checkbox" id="id_background_scrolling_checkbox"><span id="id_background_scrolling_text_span">Keep tabs scrolling in background. (NL)</span></div>
+<div class="options_entry"><input type="checkbox" id="id_hotkeys_enabled_checkbox"><span id="id_hotkeys_enabled_text_span">Enable hotkeys: (NL)</span></div>
+<div class="options_entry"><span id="id_hotkey_scrolling_text_span" class="hotkey_text">Toggle scrolling (NL)</span><span id="id_hotkey_scrolling_display_span" class="hotkey_display">Loading failed.</span><button id="id_hotkey_scrolling_capture_btn" class="set_hotkey_btn">Set Hotkey (NL)</button></div>
+<div class="options_entry"><span id="id_hotkey_direction_text_span" class="hotkey_text">Toggle direction (NL)</span><span id="id_hotkey_direction_display_span" class="hotkey_display">Loading failed.</span><button id="id_hotkey_direction_capture_btn" class="set_hotkey_btn">Set Hotkey (NL)</button></div>
+<div class="options_entry"><span id="id_hotkey_speed_text_span" class="hotkey_text">Set speed (NL)</span><span id="id_hotkey_speed_display_span" class="hotkey_display">Loading failed.</span><button id="id_hotkey_speed_capture_btn" class="set_hotkey_btn">Set Hotkey (NL)</button></div>
+
+
+<script src="options.js"></script>
+
+</body>
+</html>

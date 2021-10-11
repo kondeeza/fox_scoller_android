@@ -1,0 +1,50 @@
+{
+
+  "default_locale": "en",
+  "description": "__MSG_extensionDescription__",
+  "manifest_version": 2,
+  "name": "FoxScroller",
+  "version": "1.7",
+  "icons": {
+    "48": "icons/fs_logo_48.png",
+    "64": "icons/fs_logo_64.png",
+    "96": "icons/fs_logo_96.png"
+  },
+  "applications": {
+    "gecko": {
+       "id": "foxscroller_ff@example.com"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "webNavigation"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/fs_icon_16.png",
+      "32": "icons/fs_icon_32.png",
+      "64": "icons/fs_icon_64.png"
+    },
+    "default_title": "FoxScroller_ff"
+  },
+
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true,
+    "open_in_tab": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/cs_scrolling.js"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+.options_entry {
+    margin-bottom: 10px;
+}
+
+.options_entry span {
+    font-size: medium;
+}
+
+select {
+    font-size: 17px;
+}
+
+input {
+    font-size: 17px;
+}
+
+.hotkey_display {
+    margin: 5px 20px;
+    padding: 0px 10px;
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.hotkey_text {
+    margin-left: 20px;
+}

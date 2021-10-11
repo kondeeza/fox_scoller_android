@@ -1,0 +1,97 @@
+{
+  "extensionDescription": {
+    "message": "Automatisches Scrollen mit einstellbarer Geschwindigkeit.",
+    "description": "Short description of the extension."
+  },
+  "contextMenuSetSpeed": {
+    "message": "Geschwindigkeit",
+    "description": "Context menu entry to open popup to set speed."
+  },
+  "contextMenuToggleDirection": {
+    "message": "Richtung wechseln",
+    "description": "Context menu entry to toggle scrolling direction."
+  },
+  "contextMenuOptions": {
+    "message": "Optionen",
+    "description": "Context menu entry to open options tab."
+  },
+  "lowerEndReached": {
+    "message": "Unteres Ende erreicht. Wechsle Richtung um weiter zu scrollen.",
+    "description": "Alert to display when starting to scroll although page is already at the lower end."
+  },
+  "upperEndReached": {
+    "message": "Oberes Ende erreicht. Wechsle Richtung um weiter zu scrollen.",
+    "description": "Alert to display when starting to scroll although page is already at the lower end."
+  },
+  "setSpeedPopupText": {
+    "message": "Geschwindigkeit (px/s)",
+    "description": "Description of input to set speed. Unit: pixel per second."
+  },
+  "setSpeedPopupButtonText": {
+    "message": "OK",
+    "description": "Button description: Confirm speed input."
+  },
+  "optionsTitle": {
+    "message": "Einstellungen",
+    "description": "Titel of the options section"
+  },
+
+  "optionsActionOnEnd": {
+    "message": "Am Ende der Seite: ",
+    "description": "Options text: select action if end is reached."
+  },
+
+  "optionsActionOnEndSelectNothing": {
+    "message": "Nichts",
+    "description": "Select item: Do nothing."
+  },
+
+  "optionsActionOnEndSelectStop": {
+    "message": "Stopp",
+    "description": "Select item: Stop."
+  },
+
+  "optionsActionOnEndSelectToggle": {
+    "message": "Richtung wechseln",
+    "description": "Select item: Toggle direction."
+  },
+
+  "optionsDelay": {
+    "message": "Verzögerung am Ende (s)",
+    "description": "Options text: Delay (in seconds) at end of scrolling before chosen option is executed."
+  },
+
+  "optionsKeepScrolling": {
+    "message": "Weiterscrollen nach Seitenwechsel oder Neuladen.",
+    "description": "Options text: enable/disable if page keeps scrolling on change/reload."
+  },
+
+  "optionsAutomaticallyStart": {
+    "message": "Scrollen automatisch starten.",
+    "description": "Options text: enable/disable if scrolling starts automatically."
+  },
+  "optionsBackgroundScrolling": {
+    "message": "Im Hintergrund weiterscrollen.",
+    "description": "Options text: enable/disable if tabs keep scrolling in the background."
+  },
+  "optionsEnableHotkeys": {
+    "message": "Tastenkürzel aktivieren:",
+    "description": "Options text: enable/disable hotkeys."
+  },
+  "optionsHotkeyScrolling": {
+    "message": "Scrollen start/stoppen:",
+    "description": "Hotkey text: toggle scrolling"
+  },
+  "optionsHotkeyDirection": {
+    "message": "Richtung umschalten:",
+    "description": "Hotkey text: toggle direction"
+  },
+  "optionsHotkeySpeed": {
+    "message": "Geschwindigkeit ändern:",
+    "description": "Hotkey text: open speed menu"
+  },
+  "optionsSetHotkeyButton": {
+    "message": "Zuweisen",
+    "description": "Hotkey button: start hotkey capture"
+  }
+}

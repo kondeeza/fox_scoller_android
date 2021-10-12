@@ -135,6 +135,8 @@ function onStartScrolling(tabId) {
             tabId: tabId, path: scrollingIcon
         });
     }
+    // set icon text
+    browser.browserAction.setTitle({ title: "FoxScroller:Android (On)" });
     // add tabId to list of scrolling tabs if its not in it
     addScrollingTabId(tabId);
 }
@@ -146,6 +148,8 @@ function onStopScrolling(tabId) {
             tabId: tabId
         });
     }
+    // set icon text
+    browser.browserAction.setTitle({ title: "FoxScroller:Android (Off)" });
     // remove tabId from list of scrolling tabs
     removeScrollingTabId(tabId);
 }

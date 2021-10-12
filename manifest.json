@@ -4,7 +4,7 @@
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
   "name": "FoxScroller_for_android",
-  "version": "1.7.1",
+  "version": "1.7.3",
   "icons": {
     "48": "icons/fs_logo_48.png",
     "64": "icons/fs_logo_64.png",

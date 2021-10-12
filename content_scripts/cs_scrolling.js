@@ -12,6 +12,8 @@ var hotkeyScrolling;
 var hotkeyDirection;
 var hotkeySpeed;
 var delayAtEndpoint = 0;
+let isTouchStart = false  //android only - allow  touch screen manual-scrolling to override auto-scrolling
+let pendingIsTouchStartTimeOuts = []
 
 function startScrolling(newDirection, manual) {
     if(!scrolling) {
@@ -36,7 +38,7 @@ function startScrolling(newDirection, manual) {
                 if (newDirection != direction) {
                     toggleDirection(false);
                 }
-                excecuteScrolling();
+                executeScrolling();
             });
         }
     }
@@ -114,9 +116,12 @@ function toggleDirection(report = true) {
 var distanceToScrollOnNextFrame = 0;
 var timeOfHittingEndPoint = null;
 
-function excecuteScrolling() {
+function executeScrolling() {
     window.requestAnimationFrame(function scrollABit(timestamp) {
-        if(scrolling) {
+        if(scrolling && isTouchStart){
+            window.requestAnimationFrame(scrollABit)
+        }
+        else if (scrolling) {
             // decide which endpoint to use, depending on the direction
             endPoint = direction==1?window.scrollMaxY:0;
             if ((window.scrollY != endPoint)) {
@@ -221,4 +226,13 @@ function handleKeypress(event) {
 loadOptions();
 // Assign handleMessages as listener for messages from the extension.
 browser.runtime.onMessage.addListener(handleMessage);
+document.addEventListener('touchstart', function (event) {
+    isTouchStart = true;
+    pendingIsTouchStartTimeOuts.forEach(element => clearTimeout(pendingIsTouchStartTimeOuts.pop())); //clear all pending timeouts
+    }, false)
+document.addEventListener('touchend', function (event) {
+    pendingIsTouchStartTimeOuts.forEach(element => clearTimeout(pendingIsTouchStartTimeOuts.pop())); //clear any leftover timeouts first
+    let isTouchStartTimeOut = setTimeout(function(){ isTouchStart = false; }, 750); //create timeout
+    pendingIsTouchStartTimeOuts.push(isTouchStartTimeOut) //keep track of timeouts
+    }, false)
 console.log("successfully initiated foxscrollerff's content script")

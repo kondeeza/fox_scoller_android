@@ -3,8 +3,8 @@
   "default_locale": "en",
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
-  "name": "FoxScroller_for_android",
-  "version": "1.7.4",
+  "name": "MyScroller_for_android",
+  "version": "1.7.5",
   "icons": {
     "48": "icons/fs_logo_48.png",
     "64": "icons/fs_logo_64.png",
@@ -12,7 +12,7 @@
   },
   "applications": {
     "gecko": {
-       "id": "foxscroller_ff@example.com"
+       "id": "myscroller_ff_android@example.com"
     }
   },
   "permissions": [
@@ -28,7 +28,7 @@
       "32": "icons/fs_icon_32.png",
       "64": "icons/fs_icon_64.png"
     },
-    "default_title": "FoxScroller_android"
+    "default_title": "MyScroller_android"
   },
 
   "background": {
